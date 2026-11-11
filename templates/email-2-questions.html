@@ -1,0 +1,44 @@
+<tr>
+<td class="pad dm-ink" style="padding:28px 32px 8px 32px;font-family:Georgia,'Times New Roman',serif;font-size:28px;line-height:34px;color:#1f2430;">
+<h1 style="margin:0;font-family:Georgia,'Times New Roman',serif;font-size:28px;line-height:34px;font-weight:normal;color:#1f2430;" class="dm-ink">Questions before you check out?</h1>
+</td>
+</tr>
+<tr>
+<td class="pad dm-ink" style="padding:0 32px 8px 32px;font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:24px;color:#1f2430;">
+{{ greeting }}, your cart is still saved. Here are the answers people ask for most before they order.
+</td>
+</tr>
+<tr>
+<td class="pad" style="padding:8px 32px 8px 32px;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td class="dm-rule dm-ink" style="padding:12px 0;border-top:1px solid #e6e1d8;font-family:Arial,Helvetica,sans-serif;font-size:15px;line-height:22px;color:#1f2430;">
+<strong>Delivery.</strong> {{ delivery_promise }}
+</td>
+</tr>
+<tr>
+<td class="dm-rule dm-ink" style="padding:12px 0;border-top:1px solid #e6e1d8;font-family:Arial,Helvetica,sans-serif;font-size:15px;line-height:22px;color:#1f2430;">
+<strong>Returns.</strong> {{ returns_summary }} <a class="dm-link" href="{{ url_returns }}" style="color:#9a2a1f;text-decoration:underline;">Read the returns policy</a>.
+</td>
+</tr>
+<tr>
+<td class="dm-rule dm-ink" style="padding:12px 0;border-top:1px solid #e6e1d8;border-bottom:1px solid #e6e1d8;font-family:Arial,Helvetica,sans-serif;font-size:15px;line-height:22px;color:#1f2430;">
+<strong>Help.</strong> Reply to this email or write to <a class="dm-link" href="mailto:{{ support_email }}" style="color:#9a2a1f;text-decoration:underline;">{{ support_email }}</a> and a person will answer.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+{{#review_quote}}
+<tr>
+<td class="pad dm-ink" style="padding:12px 32px 0 32px;font-family:Georgia,'Times New Roman',serif;font-size:17px;line-height:26px;color:#1f2430;">
+&ldquo;{{ review_quote }}&rdquo;<br>
+<span class="dm-muted" style="font-family:Arial,Helvetica,sans-serif;font-size:13px;line-height:20px;color:#5a5f6b;">{{ review_attribution }}</span>
+</td>
+</tr>
+{{/review_quote}}
+{{> items }}
+{{> button }}
+<tr>
+<td class="pad" style="padding:0 32px 24px 32px;font-size:1px;line-height:1px;">&nbsp;</td>
+</tr>

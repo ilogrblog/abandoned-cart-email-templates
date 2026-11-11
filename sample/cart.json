@@ -1,0 +1,40 @@
+{
+  "common": {
+    "store_name": "Example Store",
+    "postal_address": "1 Example Street, Exampletown, EX1 1AA, United Kingdom",
+    "support_email": "help@example.com",
+    "greeting": "Hello",
+    "base_url": "https://shop.example.com",
+    "restore_path": "/cart/restore/SAMPLE-TOKEN",
+    "returns_path": "/pages/returns",
+    "unsubscribe_url": "https://shop.example.com/email/unsubscribe/SAMPLE-TOKEN",
+    "subtotal": "£71.00",
+    "items": [
+      {"title": "Stoneware mug, set of two", "variant": "Clay red", "quantity": "1", "price": "£28.00", "image_url": "../../images/sample-mug.png"},
+      {"title": "Merino scarf", "variant": "Pine green", "quantity": "1", "price": "£35.00", "image_url": "../../images/sample-scarf.png"},
+      {"title": "Soy candle", "variant": "Winter spice", "quantity": "1", "price": "£8.00", "image_url": "../../images/sample-candle.png"}
+    ],
+    "delivery_promise": "Order by 15 December for delivery before 24 December with standard shipping.",
+    "returns_summary": "You have 30 days after delivery to return an unused item for a refund."
+  },
+  "variants": {
+    "minimal": {
+      "review_quote": "",
+      "review_attribution": "",
+      "hold_note": "",
+      "low_stock_note": "",
+      "incentive_text": "",
+      "incentive_code": "",
+      "incentive_terms": ""
+    },
+    "full": {
+      "review_quote": "Arrived well packed and exactly as pictured.",
+      "review_attribution": "A verified buyer, 4.8 average from 212 reviews",
+      "hold_note": "We can keep these items in your cart until 20 December.",
+      "low_stock_note": "Only 3 of the Merino scarf in Pine green are left.",
+      "incentive_text": "A thank-you for finishing your order.",
+      "incentive_code": "THANKS5",
+      "incentive_terms": "5% off one order, valid until 20 December."
+    }
+  }
+}

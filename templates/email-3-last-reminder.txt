@@ -1,0 +1,17 @@
+Last reminder about your cart
+
+{{ greeting }}, this is the last email we will send about this cart.{{#hold_note}} {{ hold_note }}{{/hold_note}}
+{{#low_stock_note}}
+
+Stock: {{ low_stock_note }}
+{{/low_stock_note}}
+{{#incentive_text}}
+
+{{ incentive_text }} Use code {{ incentive_code }} at checkout. {{ incentive_terms }}
+{{/incentive_text}}
+
+{{> items }}
+
+{{> button }}
+
+If you no longer want these items, you do not need to do anything. We will not email you about this cart again.

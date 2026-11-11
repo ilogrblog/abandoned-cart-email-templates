@@ -1,0 +1,3 @@
+{{#items}}- {{ title }} ({{ variant }}), Qty {{ quantity }}: {{ price }}
+{{/items}}Subtotal: {{ subtotal }}
+Shipping and tax are shown at checkout.

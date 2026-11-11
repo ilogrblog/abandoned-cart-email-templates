@@ -1,0 +1,24 @@
+Your cart at {{ store_name }} is saved. Pick up where you stopped.
+
+{{ store_name }}
+{{ url_shop }}
+
+You left something in your cart
+
+{{ greeting }}, the items below are still in your cart. You can pick up where you stopped.
+
+{{#items}}- {{ title }} ({{ variant }}), Qty {{ quantity }}: {{ price }}
+{{/items}}Subtotal: {{ subtotal }}
+Shipping and tax are shown at checkout.
+
+
+Return to your cart:
+{{ url_restore }}
+
+
+Questions about an item or an order? Reply to this email or write to {{ support_email }}.
+
+--
+You are receiving this email because you started a checkout at {{ store_name }} with this address and did not finish it.
+{{ store_name }}, {{ postal_address }}
+Unsubscribe from reminders like this one: {{ unsubscribe_url }}

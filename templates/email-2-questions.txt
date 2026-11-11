@@ -1,0 +1,16 @@
+Questions before you check out?
+
+{{ greeting }}, your cart is still saved. Here are the answers people ask for most before they order.
+
+Delivery. {{ delivery_promise }}
+Returns. {{ returns_summary }} Returns policy: {{ url_returns }}
+Help. Reply to this email or write to {{ support_email }} and a person will answer.
+{{#review_quote}}
+
+"{{ review_quote }}"
+{{ review_attribution }}
+{{/review_quote}}
+
+{{> items }}
+
+{{> button }}

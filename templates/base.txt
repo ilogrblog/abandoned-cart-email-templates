@@ -1,0 +1,10 @@
+{{ preheader }}
+
+{{ store_name }}
+{{ url_shop }}
+
+{{ body }}
+--
+You are receiving this email because you started a checkout at {{ store_name }} with this address and did not finish it.
+{{ store_name }}, {{ postal_address }}
+Unsubscribe from reminders like this one: {{ unsubscribe_url }}

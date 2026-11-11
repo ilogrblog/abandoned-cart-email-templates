@@ -1,0 +1,17 @@
+<tr>
+<td class="pad dm-ink" style="padding:28px 32px 8px 32px;font-family:Georgia,'Times New Roman',serif;font-size:28px;line-height:34px;color:#1f2430;">
+<h1 style="margin:0;font-family:Georgia,'Times New Roman',serif;font-size:28px;line-height:34px;font-weight:normal;color:#1f2430;" class="dm-ink">You left something in your cart</h1>
+</td>
+</tr>
+<tr>
+<td class="pad dm-ink" style="padding:0 32px 8px 32px;font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:24px;color:#1f2430;">
+{{ greeting }}, the items below are still in your cart. You can pick up where you stopped.
+</td>
+</tr>
+{{> items }}
+{{> button }}
+<tr>
+<td class="pad dm-ink" style="padding:20px 32px 24px 32px;font-family:Arial,Helvetica,sans-serif;font-size:15px;line-height:22px;color:#1f2430;">
+Questions about an item or an order? Reply to this email or write to <a class="dm-link" href="mailto:{{ support_email }}" style="color:#9a2a1f;text-decoration:underline;">{{ support_email }}</a>.
+</td>
+</tr>

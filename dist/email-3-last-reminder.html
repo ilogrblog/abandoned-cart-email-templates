@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="x-apple-disable-message-reformatting" content="yes">
+<meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark">
+<title>Last reminder about your cart</title>
+<!--[if mso]>
+<xml>
+<o:OfficeDocumentSettings>
+<o:PixelsPerInch>96</o:PixelsPerInch>
+</o:OfficeDocumentSettings>
+</xml>
+<![endif]-->
+<!--[if mso]>
+<style>
+table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+.btn-cell { mso-padding-alt: 14px 28px; }
+</style>
+<![endif]-->
+<style>
+/* Layout lives in inline style attributes. This block only holds what cannot be inlined: resets, narrow screens, dark mode. */
+body, table, td, a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+img { -ms-interpolation-mode: bicubic; border: 0; outline: none; text-decoration: none; }
+@media (max-width: 620px) {
+  .container { width: 100% !important; }
+  .pad { padding-left: 16px !important; padding-right: 16px !important; }
+  .btn-cell { width: 100% !important; }
+  .btn-link { display: block !important; }
+}
+@media (prefers-color-scheme: dark) {
+  .dm-page { background-color: #14161a !important; }
+  .dm-card { background-color: #1e2128 !important; }
+  .dm-ink { color: #f2f3f5 !important; }
+  .dm-muted { color: #b9bfcb !important; }
+  .dm-rule { border-color: #3a3f4b !important; }
+  .dm-btn { background-color: #ff9a8a !important; }
+  .dm-btn-link { color: #2a0d08 !important; }
+  .dm-link { color: #ffb4a8 !important; }
+}
+</style>
+</head>
+<body class="dm-page" style="margin:0;padding:0;background-color:#f3efe8;" bgcolor="#f3efe8">
+<div role="article" aria-roledescription="email" aria-label="Last reminder about your cart" lang="en" style="margin:0;padding:0;">
+<table role="presentation" class="dm-page" width="100%" cellpadding="0" cellspacing="0" border="0" style="width:100%;background-color:#f3efe8;" bgcolor="#f3efe8">
+<tr>
+<td align="center" style="padding:16px 8px;">
+
+<table role="presentation" class="container" width="600" cellpadding="0" cellspacing="0" border="0" style="width:600px;max-width:100%;">
+<tr>
+<td class="pad dm-muted" style="padding:0 24px 12px 24px;font-family:Arial,Helvetica,sans-serif;font-size:14px;line-height:20px;color:#5a5f6b;">
+This is the last email about this cart.
+</td>
+</tr>
+<tr>
+<td class="dm-card" style="background-color:#ffffff;border-radius:8px;" bgcolor="#ffffff">
+
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td class="pad dm-rule" style="padding:20px 32px;border-bottom:1px solid #e6e1d8;font-family:Georgia,'Times New Roman',serif;font-size:22px;line-height:28px;color:#1f2430;">
+<a class="dm-ink" href="{{ url_shop }}" style="color:#1f2430;text-decoration:none;">{{ store_name }}</a>
+</td>
+</tr>
+<tr>
+<td class="pad dm-ink" style="padding:28px 32px 8px 32px;font-family:Georgia,'Times New Roman',serif;font-size:28px;line-height:34px;color:#1f2430;">
+<h1 style="margin:0;font-family:Georgia,'Times New Roman',serif;font-size:28px;line-height:34px;font-weight:normal;color:#1f2430;" class="dm-ink">Last reminder about your cart</h1>
+</td>
+</tr>
+<tr>
+<td class="pad dm-ink" style="padding:0 32px 8px 32px;font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:24px;color:#1f2430;">
+{{ greeting }}, this is the last email we will send about this cart.
+{{#hold_note}}{{ hold_note }}{{/hold_note}}
+</td>
+</tr>
+{{#low_stock_note}}
+<tr>
+<td class="pad dm-ink" style="padding:8px 32px 0 32px;font-family:Arial,Helvetica,sans-serif;font-size:15px;line-height:22px;color:#1f2430;">
+<strong>Stock:</strong> {{ low_stock_note }}
+</td>
+</tr>
+{{/low_stock_note}}
+{{#incentive_text}}
+<tr>
+<td class="pad dm-ink" style="padding:12px 32px 0 32px;font-family:Arial,Helvetica,sans-serif;font-size:15px;line-height:22px;color:#1f2430;">
+<strong>{{ incentive_text }}</strong> Use code <strong>{{ incentive_code }}</strong> at checkout. {{ incentive_terms }}
+</td>
+</tr>
+{{/incentive_text}}
+<tr>
+<td class="pad" style="padding:8px 32px 0 32px;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+{{#items}}
+<tr>
+<td class="dm-rule" width="88" valign="top" style="width:88px;padding:12px 0;border-bottom:1px solid #e6e1d8;">
+<img src="{{ image_url }}" width="72" height="72" alt="{{ title }}" style="display:block;width:72px;height:72px;border:0;background-color:#eee9e0;">
+</td>
+<td class="dm-rule dm-ink" valign="top" style="padding:12px 12px 12px 8px;border-bottom:1px solid #e6e1d8;font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:22px;color:#1f2430;">
+<strong>{{ title }}</strong><br>
+<span class="dm-muted" style="font-size:14px;line-height:20px;color:#5a5f6b;">{{ variant }} &middot; Qty {{ quantity }}</span>
+</td>
+<td class="dm-rule dm-ink" width="90" align="right" valign="top" style="width:90px;padding:12px 0;border-bottom:1px solid #e6e1d8;font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:22px;color:#1f2430;white-space:nowrap;">
+{{ price }}
+</td>
+</tr>
+{{/items}}
+<tr>
+<td colspan="2" class="dm-ink" align="right" style="padding:14px 8px 0 0;font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:22px;color:#1f2430;">
+<strong>Subtotal</strong>
+</td>
+<td class="dm-ink" align="right" style="padding:14px 0 0 0;font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:22px;color:#1f2430;white-space:nowrap;">
+<strong>{{ subtotal }}</strong>
+</td>
+</tr>
+<tr>
+<td colspan="3" class="dm-muted" style="padding:4px 0 0 0;font-family:Arial,Helvetica,sans-serif;font-size:13px;line-height:20px;color:#5a5f6b;">
+Shipping and tax are shown at checkout.
+</td>
+</tr>
+</table>
+</td>
+</tr>
+
+<tr>
+<td class="pad" align="left" style="padding:24px 32px 8px 32px;">
+<table role="presentation" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td class="btn-cell dm-btn" align="center" bgcolor="#9a2a1f" style="background-color:#9a2a1f;border-radius:6px;padding:0;">
+<a class="btn-link dm-btn-link" href="{{ url_restore }}" style="font-family:Arial,Helvetica,sans-serif;font-size:17px;line-height:24px;font-weight:bold;color:#ffffff;text-decoration:none;display:inline-block;padding:14px 28px;">Complete your order</a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="pad dm-muted" style="padding:8px 32px 0 32px;font-family:Arial,Helvetica,sans-serif;font-size:13px;line-height:20px;color:#5a5f6b;">
+Button not working? Copy this address into your browser:<br>
+<a class="dm-link" href="{{ url_restore }}" style="color:#9a2a1f;text-decoration:underline;word-break:break-all;">{{ url_restore }}</a>
+</td>
+</tr>
+
+<tr>
+<td class="pad dm-ink" style="padding:20px 32px 24px 32px;font-family:Arial,Helvetica,sans-serif;font-size:15px;line-height:22px;color:#1f2430;">
+If you no longer want these items, you do not need to do anything. We will not email you about this cart again.
+</td>
+</tr>
+
+<tr>
+<td class="pad dm-rule dm-muted" style="padding:20px 32px 28px 32px;border-top:1px solid #e6e1d8;font-family:Arial,Helvetica,sans-serif;font-size:13px;line-height:20px;color:#5a5f6b;">
+You are receiving this email because you started a checkout at {{ store_name }} with this address and did not finish it.<br>
+{{ store_name }}, {{ postal_address }}<br>
+<a class="dm-link" href="{{ unsubscribe_url }}" style="color:#9a2a1f;text-decoration:underline;">Unsubscribe</a> from reminders like this one.
+</td>
+</tr>
+</table>
+
+</td>
+</tr>
+</table>
+
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

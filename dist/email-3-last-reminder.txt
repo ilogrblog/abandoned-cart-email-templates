@@ -1,0 +1,32 @@
+This is the last email about this cart.
+
+{{ store_name }}
+{{ url_shop }}
+
+Last reminder about your cart
+
+{{ greeting }}, this is the last email we will send about this cart.{{#hold_note}} {{ hold_note }}{{/hold_note}}
+{{#low_stock_note}}
+
+Stock: {{ low_stock_note }}
+{{/low_stock_note}}
+{{#incentive_text}}
+
+{{ incentive_text }} Use code {{ incentive_code }} at checkout. {{ incentive_terms }}
+{{/incentive_text}}
+
+{{#items}}- {{ title }} ({{ variant }}), Qty {{ quantity }}: {{ price }}
+{{/items}}Subtotal: {{ subtotal }}
+Shipping and tax are shown at checkout.
+
+
+Complete your order:
+{{ url_restore }}
+
+
+If you no longer want these items, you do not need to do anything. We will not email you about this cart again.
+
+--
+You are receiving this email because you started a checkout at {{ store_name }} with this address and did not finish it.
+{{ store_name }}, {{ postal_address }}
+Unsubscribe from reminders like this one: {{ unsubscribe_url }}

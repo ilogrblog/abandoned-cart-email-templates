@@ -1,0 +1,15 @@
+{
+  "name": "abandoned-cart-email-templates",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Three abandoned cart email templates with a send ledger and tests",
+  "license": "MIT",
+  "scripts": {
+    "build": "python3 scripts/build.py",
+    "test": "python3 -m unittest discover -s tests -v",
+    "render": "python3 scripts/build.py && node scripts/render-check.cjs"
+  },
+  "devDependencies": {
+    "playwright-core": "1.62.1"
+  }
+}
