@@ -2,7 +2,7 @@
 
 Three HTML email templates for an abandoned cart sequence (about 1 hour, 24 hours and 48 hours after the cart was left), each with a plain-text part, plus a small send ledger that shows when an email must be skipped, cancelled or never repeated. They accompany the [iLogr](https://ilogr.com/) guide [Abandoned Cart Email Templates for the Festive Season: Three HTML Emails, Outlook and Cancel Rules](https://ilogr.com/abandoned-cart-email-templates-festive-season-three-html-emails-outlook-and-cancel-rules/).
 
-> **Before you use it:** this is example code, provided as is, without warranty. Try it in a test mailbox or a staging copy first, never straight on a live store, and check the result in the mail clients your customers use. You use it entirely at your own risk. iLogr cannot see your store, and nobody who wrote or published this code accepts responsibility for damage, lost sales, delivery problems or a complaint from a regulator.
+> **Before you use it:** these templates are ideas for what abandoned cart emails could look like, not ready-made files for any particular platform or mail client. Adapting them to yours, and making them work there, is up to you. This is example code, provided as is, without warranty. Try it in a test mailbox or a staging copy first, never straight on a live store, and check the result in the mail clients your customers use. You use it entirely at your own risk. iLogr cannot see your store, and nobody who wrote or published this code accepts responsibility for damage, lost sales, delivery problems or a complaint from a regulator.
 
 ![The first email, light mode](docs/preview-1-reminder-light.png)
 
@@ -11,7 +11,7 @@ Three HTML email templates for an abandoned cart sequence (about 1 hour, 24 hour
 | Path | What it is |
 | --- | --- |
 | `templates/` | A shared layout (`base.html`, `base.txt`), a cart-items partial, a button partial and the three email bodies |
-| `dist/` | The three emails, built, with runtime `{{ placeholders }}` still in place. Copy these into your platform |
+| `dist/` | The three emails, built, with runtime `{{ placeholders }}` still in place. Starting points to adapt, not finished files for any one platform |
 | `sample/cart.json` | Sample data: one cart, a `minimal` variant (no optional blocks) and a `full` variant (all optional blocks) |
 | `scripts/build.py` | Builds `dist/` and `out/` and the MIME messages. Python 3.9 or later, no packages |
 | `scripts/render-check.cjs` | Optional: renders every email in headless Chrome at three widths, light and dark, and checks it |
