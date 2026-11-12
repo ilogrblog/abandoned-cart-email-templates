@@ -1,6 +1,6 @@
 # Abandoned cart email templates: three emails, a plain-text part and a send ledger
 
-Three HTML email templates for an abandoned cart sequence (about 1 hour, 24 hours and 48 hours after the cart was left), each with a plain-text part, plus a small send ledger that shows when an email must be skipped, cancelled or never repeated. They accompany the [iLogr](https://ilogr.com/) guide **Abandoned Cart Emails for the Festive Season: What Each Email Should Contain and What to Test First**.
+Three HTML email templates for an abandoned cart sequence (about 1 hour, 24 hours and 48 hours after the cart was left), each with a plain-text part, plus a small send ledger that shows when an email must be skipped, cancelled or never repeated. They accompany the [iLogr](https://ilogr.com/) guide [Abandoned Cart Email Templates for the Festive Season: Three HTML Emails, Outlook and Cancel Rules](https://ilogr.com/abandoned-cart-email-templates-festive-season-three-html-emails-outlook-and-cancel-rules/).
 
 > **Before you use it:** this is example code, provided as is, without warranty. Try it in a test mailbox or a staging copy first, never straight on a live store, and check the result in the mail clients your customers use. You use it entirely at your own risk. iLogr cannot see your store, and nobody who wrote or published this code accepts responsibility for damage, lost sales, delivery problems or a complaint from a regulator.
 
