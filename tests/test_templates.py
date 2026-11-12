@@ -36,7 +36,7 @@ CONTRAST_PAIRS = [
     ("#2a0d08", "#ff9a8a"), ("#ffb4a8", "#1e2128"),
 ]
 RUNTIME_PLACEHOLDERS = {
-    "store_name", "postal_address", "support_email", "greeting", "unsubscribe_url", "subtotal", "url_shop",
+    "store_name", "logo_url", "postal_address", "support_email", "greeting", "unsubscribe_url", "subtotal", "url_shop",
     "url_restore", "url_returns", "title", "variant", "quantity", "price", "image_url", "delivery_promise",
     "returns_summary", "review_quote", "review_attribution", "hold_note", "low_stock_note", "incentive_text",
     "incentive_code", "incentive_terms", "items",
@@ -193,6 +193,14 @@ class BuiltEmails(unittest.TestCase):
             for a in imgs:
                 self.assertTrue(a.get("alt"), f"{v}/{n}: missing alt")
                 self.assertTrue(a.get("width") and a.get("height"), f"{v}/{n}: missing width/height")
+
+    def test_header_logo_is_a_linked_image_with_store_name_as_alt(self):
+        for v, n, path in self.rendered():
+            doc = parse(path)
+            first = next(a for t, a in doc.tags if t == "img")
+            self.assertTrue(first["src"].endswith("sample-logo.png"), f"{v}/{n}: first image is the logo")
+            self.assertEqual(first["alt"], "Example Store", f"{v}/{n}: logo alt is the store name")
+            self.assertEqual((first["width"], first["height"]), ("160", "40"))
 
     def test_links_and_utm_rules(self):
         for v, n, path in self.rendered():

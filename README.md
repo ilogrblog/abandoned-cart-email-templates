@@ -16,7 +16,7 @@ Three HTML email templates for an abandoned cart sequence (about 1 hour, 24 hour
 | `scripts/build.py` | Builds `dist/` and `out/` and the MIME messages. Python 3.9 or later, no packages |
 | `scripts/render-check.cjs` | Optional: renders every email in headless Chrome at three widths, light and dark, and checks it |
 | `ledger/ledger.py` | The skip, cancel and never-repeat rules, as a runnable reference (SQLite, no packages) |
-| `tests/` | 37 checks for the templates and the ledger |
+| `tests/` | 38 checks for the templates and the ledger |
 
 The three emails:
 
@@ -30,7 +30,7 @@ The timings are common practice, not proven best. Measure your own.
 
 ```bash
 python3 scripts/build.py                  # writes dist/ and out/
-python3 -m unittest discover -s tests -v  # 37 checks
+python3 -m unittest discover -s tests -v  # 38 checks
 ```
 
 Open `out/full/email-1-reminder.html` in a browser to preview. For the headless render check:
@@ -49,6 +49,7 @@ It drives the Google Chrome you already have (`channel: 'chrome'`) and writes sc
 | Placeholder | Meaning |
 | --- | --- |
 | `{{ store_name }}`, `{{ postal_address }}`, `{{ support_email }}` | Sender identity. CAN-SPAM requires commercial email to tell recipients where you are located, so keep a real address here |
+| `{{ logo_url }}` | Your logo as a PNG at three times its display size (the sample is 480 by 120 pixels, shown at 160 by 40). `images/sample-logo.png` is a made-up placeholder, not a real brand; replace it with yours. The image's alt text is the store name, so the brand still shows when images are blocked. Use a logo that reads on both a light and a dark background, or one with its own coloured shape, because email clients do not swap images for dark mode |
 | `{{ greeting }}` | "Hello" or "Hello Sam". Never assume a first name exists |
 | `{{#items}} ... {{/items}}` | One block per cart line: `title`, `variant`, `quantity`, `price`, `image_url` |
 | `{{ subtotal }}` | Cart subtotal, formatted |
@@ -77,7 +78,7 @@ Tested by `tests/` and `scripts/render-check.cjs`:
 - Layout is in inline styles. The `<style>` block holds only resets, the narrow-screen rules and dark mode.
 - No flexbox, grid, `<picture>`, script, form, background image, positioning, float, `calc()`, `var()` or hidden content.
 - Every colour comes from one palette, and the text colour pairs meet 4.5:1 (WCAG 2.2 AA) in light and dark mode.
-- Images have alt text and dimensions; every link is HTTPS or `mailto:`; UTM values are lowercase; the unsubscribe link is untagged; the restore token survives tagging.
+- The header shows a logo image, and every image has alt text and dimensions; every link is HTTPS or `mailto:`; UTM values are lowercase; the unsubscribe link is untagged; the restore token survives tagging.
 - HTML parts stay under 100 KB; each message is `multipart/alternative` with the plain-text part first; the `List-Unsubscribe` and `List-Unsubscribe-Post` headers are present.
 - In Chrome 157 (Playwright 1.62.1): no horizontal scroll at 600, 375 and 320 pixels; images load; the button is at least 44 pixels high; dark mode applies.
 

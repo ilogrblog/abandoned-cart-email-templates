@@ -1,6 +1,7 @@
 {
   "common": {
     "store_name": "Example Store",
+    "logo_url": "../../images/sample-logo.png",
     "postal_address": "1 Example Street, Exampletown, EX1 1AA, United Kingdom",
     "support_email": "help@example.com",
     "greeting": "Hello",
